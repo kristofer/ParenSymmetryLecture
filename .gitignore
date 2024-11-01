@@ -25,3 +25,11 @@ replay_pid*
 
 out/
 target/
+
+.DS_Store
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Maven #
