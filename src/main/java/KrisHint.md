@@ -1,28 +1,29 @@
 
 ## If we have...
 
-"()"  -> true
-"( ( ) )" -> true
-"(( (() ) ) )" -> true
-"(zipcode)" -> true
+- "()"  -> true
+- "( ( ) )" -> true
+- "(( (() ) ) )" -> true
+- "(zipcode)" -> true
 
-"(" -> false
-")" -> false
-"(()" -> false
-"())" -> false
-"" -> false
-"zipcode" -> false
-")(" -> false
+- "(" -> false
+- ")" -> false
+- "(()" -> false
+- "())" -> false
 
-"(((((((((())))))))))" -> true
-"(())()()()()((()))()()()" -> true
-"((( () () () )))" -> true
+- "" -> false
+- "zipcode" -> false
+- ")(" -> false
 
-")((((((((())))))))))" -> false
-"(())()()()()(()))()()()" -> false
-"((( () ( () )))" -> false
+- "(((((((((())))))))))" -> true
+- "(())()()()()((()))()()()" -> true
+- "((( () () () )))" -> true
 
+- ")((((((((())))))))))" -> false
+- "(())()()()()(()))()()()" -> false
+- "((( () ( () )))" -> false
 
+```
 // STEP ZERO
 // get the obvious stuff out of the way
 //
@@ -41,10 +42,10 @@ func is-balanced1(s) {
     return false
 }
 // NOW, what ideas for doSomething() and doSomethingElse() ??
+```
 
 
-
-
+```
 // count ( and ) and look for equal number
 // ")(" -> false
 // "" -> false
@@ -62,13 +63,16 @@ func is-balanced1(s) {
 
 // but what's the problem? ==> ")(" is false (but it would say true)
 // also "" ==> true (but it's not)
+```
 
-// What other possibilities?
+## What other possibilities?
 
+```
 s = "()foo()bar"
 remove nondelimiter => "()()"
+```
 
-
+```
 // count ( and ) and look for equal number
 func is-balanced2(s) {
     parens = 0
@@ -84,9 +88,9 @@ func is-balanced2(s) {
 }
 
 // now at least we'd catch ")(" but not ""
+```
 
-
-
+```
 // count ( and ) and look for equal number
 func is-balanced2(s) {
 
@@ -107,13 +111,17 @@ func is-balanced2(s) {
     
     return false
 }
+```
 
+```
 // an alternative is to just add up the parens, and subtract the thesis
 // if empty string, false
 //    if negative, false (inside)
 // if positive, false
 // if zero, true
+```
 
+## And for the file stuff.
 
 ```java
 //parensymmetry help
