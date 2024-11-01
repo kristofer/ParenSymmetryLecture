@@ -80,12 +80,17 @@ func is-balanced1(s) {
 ## What other possibilities?
 
 ```
+// also, Does the solution IGNORE anything other that Paren and Thesis?
 s = "()foo()bar"
-remove nondelimiter => "()()"
+
+yeah, it kinda does
 ```
 
 ```
-// count ( and ) and look for equal number
+// track and count ( and ) separately and look for equal number
+// what about ")(" ?? 
+// well, is _thesis_ is EVER greater that _parens_...
+//
 func is-balanced2(s) {
     parens = 0
     thesis = 0
@@ -99,7 +104,7 @@ func is-balanced2(s) {
     else return false
 }
 
-// now at least we'd catch ")(" but not ""
+// now at least we'd catch ")(" but not "" (empty string)
 ```
 
 ```
@@ -108,8 +113,9 @@ func is-balanced2(s) {
 
     if s == "" return false // what's known as a
                             // "short-circuit" case
-    if s.isEmpty() return false // what's known as a
-                            // "short-circuit" case
+
+    // in java, it's best to...
+    if s.isEmpty() return false 
 
     parens = 0
     thesis = 0
@@ -124,6 +130,8 @@ func is-balanced2(s) {
     return false
 }
 ```
+
+**Now, take this code and _en-java-ify_ it and run the tests.**
 
 ```
 // an alternative is to just add up the parens, and subtract the thesis
