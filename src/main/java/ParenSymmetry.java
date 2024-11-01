@@ -7,12 +7,12 @@ public class ParenSymmetry {
 
     public static void main(String[] args) {
         ParenSymmetry ps = new ParenSymmetry();
-        //ps.runDetailedExamples();
-        ps.runFileExamples();
+        ps.runDetailedExamples();
+        //ps.runFileExamples();
     }
 
     // lots of ways to do this
-    
+
     /* 
      * This function takes a string and returns a boolean
      * If the number of parens equals the number of thesis, return true
