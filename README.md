@@ -1,4 +1,4 @@
-# ParenSymmetry
+# ParenSymmetry Lecture
 balance is found except when it's not
 
 The strings in this array are NOT balanced
@@ -24,4 +24,3 @@ The method signature should be: `public boolean isBalanced(String stringToTest);
 And use either `TestStrings0.txt` and/or `TestStrings1.txt` to test your work.
 The results of running agains the `TestStrings0.txt` file should be
 __true, false, true, false, true, false, true__
-# ParenSymmetryLecture
