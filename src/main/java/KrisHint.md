@@ -46,14 +46,14 @@ _Falses_
 func is-balanced1(s) {
 
     for each c in string-s
-        if '(' == c, doSomething()
-        if ')' == c, doSomethingElse()
+        if '(' == c, processParen()
+        if ')' == c, processThesis()
 
     if the-string-is-balanced return true
     // else
     return false
 }
-// NOW, what ideas for doSomething() and doSomethingElse() ??
+// NOW, what ideas for processParen() and processThesis() ??
 ```
 
 
