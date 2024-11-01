@@ -1,18 +1,19 @@
 # ParenSymmetry Lecture
-balance is found except when it's not
+
+_balance is found except when it's not_
 
 The strings in this array are NOT balanced
 
-`String[] falseStrings = {"(", "((", ")", "(()())((())))"};`
+`String[] falseStrings = { "(", "((", ")", "(()())((())))" };`
 
 The Strings in this array are balanced
 
-`String[] trueStrings = {"()", "(())", "(((())))", "", "(()())((()))", "(   )", "( () ( ) )"};`
+`String[] trueStrings = { "()", "(())", "(((())))", "", "(()())((()))", "(   )", "( () ( ) )" };`
 
 Notice: it is okay to have spaces in the string. It is _also okay to have any other character in the string._
 
-And that means `()grand()illusion` should be __true__
-And `(((add (5 6)) )&^$$%^$` should be __false__
+And that means `()grand()illusion` should be __true__.
+And `(((add (5 6)) )&^$$%^$` should be __false__.
 
 Write two methods:
 - Write a method `isBalanced` that takes a string, and produces true if balanced, false otherwise. 
@@ -24,3 +25,7 @@ The method signature should be: `public boolean isBalanced(String stringToTest);
 And use either `TestStrings0.txt` and/or `TestStrings1.txt` to test your work.
 The results of running agains the `TestStrings0.txt` file should be
 __true, false, true, false, true, false, true__
+
+## Testing
+
+Be sure to run the tests in `ParenSymmetryTest.java` to prove your solution works.

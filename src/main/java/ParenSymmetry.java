@@ -11,6 +11,8 @@ public class ParenSymmetry {
         ps.runFileExamples();
     }
 
+    // lots of ways to do this
+    
     /* 
      * This function takes a string and returns a boolean
      * If the number of parens equals the number of thesis, return true
@@ -65,30 +67,30 @@ public class ParenSymmetry {
     // }
 
     // Number 3
-    public Boolean isBalanced(String s) {
-        // if the string is empty, return false
-        if (s.isEmpty()) {
-            return false;
-        }
-        int parenBalance = 0;
-        for (char c : s.toCharArray()) {
-            if (c != '(' && c != ')') {
-                continue;
-            }
-            if (c == '(') {
-                parenBalance++;
-            } else if (c == ')') {
-                parenBalance--;
-            }
-            if (parenBalance < 0) {
-                return false;
-            }
-        }
-        if (parenBalance == 0) {
-            return true;
-        }
-        return false;
-    }
+    // public Boolean isBalanced(String s) {
+    //     // if the string is empty, return false
+    //     if (s.isEmpty()) {
+    //         return false;
+    //     }
+    //     int parenBalance = 0;
+    //     for (char c : s.toCharArray()) {
+    //         if (c != '(' && c != ')') {
+    //             continue;
+    //         }
+    //         if (c == '(') {
+    //             parenBalance++;
+    //         } else if (c == ')') {
+    //             parenBalance--;
+    //         }
+    //         if (parenBalance < 0) {
+    //             return false;
+    //         }
+    //     }
+    //     if (parenBalance == 0) {
+    //         return true;
+    //     }
+    //     return false;
+    // }
 
     // Number 4
     // public Boolean isBalanced(String s) {
@@ -111,16 +113,17 @@ public class ParenSymmetry {
     // }
     
     // Number 5
-    // public Boolean isBalanced(String s) {
-    //     if (s.isEmpty()) return false;
-    //     int parens = 0;
-    //     for (char c : s.toCharArray()) {
-    //         if (c == '(') parens++;
-    //         if (c == ')') parens--;
-    //     }
-    //     if (parens == 0) return true;
-    //     return false;
-    // }
+    public Boolean isBalanced(String s) {
+        if (s.isEmpty()) return false;
+        int parens = 0;
+        for (char c : s.toCharArray()) {
+            if (c == '(') parens++;
+            if (c == ')') parens--;
+            if (parens < 0) return false;
+        }
+        if (parens == 0) return true;
+        return false;
+    }
 
 
     void checkFile(String filename) {

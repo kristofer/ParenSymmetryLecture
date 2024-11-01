@@ -63,14 +63,4 @@ public class ParenSymmetryTest {
         }
     }
 
-    @Test
-    public void testFile1() {
-        String inputTest = "()";
-        Boolean expected = true;
-        Boolean actual;
-
-        new ParenSymmetry().checkFile("src/test/resources/testFile1.txt");
-        //Assert.assertEquals(expected, actual);
-    }
-
 }
