@@ -86,10 +86,19 @@ s = "()foo()bar"
 yeah, it kinda does
 ```
 
+_What is **always** true about any balanced case?_
+
+_What is **always** true about any UNBALANCED case?_
+
+_Balanced cases: # of Parens EQUALS # of Thesis._
+
+_UNBAlanced cases: # of Parens DOES NOT EQUAL # of Thesis._
+
 ```
 // track and count ( and ) separately and look for equal number
 // what about ")(" ?? 
-// well, is _thesis_ is EVER greater that _parens_...
+//
+// well, if _thesis_ is EVER greater that _parens_...
 //
 func is-balanced2(s) {
     parens = 0
