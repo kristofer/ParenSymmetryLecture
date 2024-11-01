@@ -92,13 +92,15 @@ _What is **always** true about any UNBALANCED case?_
 
 _Balanced cases: # of Parens EQUALS # of Thesis._
 
-_UNBAlanced cases: # of Parens DOES NOT EQUAL # of Thesis._
+_UNBalanced cases: # of Parens DOES NOT EQUAL # of Thesis._
 
 ```
 // track and count ( and ) separately and look for equal number
 // what about ")(" ?? 
 //
-// well, if _thesis_ is EVER greater that _parens_...
+// Hmm: well, what if _thesis_ is EVER greater that _parens_...
+// means "( ) )" is false (parens == 1, thesis == 2)
+// means "( ( )" is false (parens == 2, thesis == 1)
 //
 func is-balanced2(s) {
     parens = 0
