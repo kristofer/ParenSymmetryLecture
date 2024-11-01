@@ -1,23 +1,35 @@
 
 ## If we have...
 
+#### Trues 
+
 - "()"  -> true
 - "( ( ) )" -> true
 - "(( (() ) ) )" -> true
 - "(zipcode)" -> true
+
+#### Falses
 
 - "(" -> false
 - ")" -> false
 - "(()" -> false
 - "())" -> false
 
+_Some special cases to ponder._
+
 - "" -> false
 - "zipcode" -> false
 - ")(" -> false
 
+### Some more longer cases
+
+_Trues_
+
 - "(((((((((())))))))))" -> true
 - "(())()()()()((()))()()()" -> true
 - "((( () () () )))" -> true
+
+_Falses_
 
 - ")((((((((())))))))))" -> false
 - "(())()()()()(()))()()()" -> false
